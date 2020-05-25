@@ -28,7 +28,7 @@ public class PushMsgSchedule {
 
         CronTrigger cronTrigger = TriggerBuilder.newTrigger().withIdentity("trigger1", "triggerGroup1")
                 .startNow()
-                .withSchedule(CronScheduleBuilder.cronSchedule("0 13 18 * * ? *"))
+                .withSchedule(CronScheduleBuilder.cronSchedule("0 30 8 * * ? *"))
                 .build(); // 每天早上8点半执行
 
         scheduler.scheduleJob(jobDetail, cronTrigger);
